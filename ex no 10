@@ -1,0 +1,26 @@
+def divide(a, b): 
+try: 
+result = a / b 
+except ZeroDivisionError: 
+return "Error: Division by zero is not allowed." 
+return result 
+print(divide(10, 0)) 
+
+def check_voter_age(age): 
+try: 
+if age < 18: 
+raise ValueError("Voter must be at least 18 years 
+old.") 
+except ValueError as e: 
+return str(e) 
+return "Voter is eligible." 
+print(check_voter_age(17)) 
+
+def validate_marks(marks): 
+try: 
+if marks < 0 or marks > 100: 
+raise ValueError("Marks should be between 0 and 100.") 
+except ValueError as e: 
+return str(e) 
+return "Marks are valid." 
+print(validate_marks(105))
