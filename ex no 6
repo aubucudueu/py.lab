@@ -1,0 +1,30 @@
+ def factorial(n):
+    if n == 0 or n == 1:
+        return 1
+    else:
+        return n * factorial(n - 1)
+ def largest_number(lst):
+    if len(lst) == 0:
+        return None
+    largest = lst[0]
+    for num in lst:
+        if num > largest:
+            largest = num
+    return largest
+ def area_of_shape(shape, radius=0, length=0, width=0, base=0, 
+height=0):
+    if shape == 'circle':
+        return 3.14 * radius ** 2
+    elif shape == 'rectangle':
+        return length * width
+    elif shape == 'triangle':
+        return 0.5 * base * height
+    else:
+        return "Unsupported shape"
+ print("Factorial of 5:", factorial(5))
+ numbers = [10, 25, 17, 9, 30]
+ print("Largest number in the list:", largest_number(numbers))
+ print("Area of circle with radius 7:", area_of_shape('circle', radius=7))
+  print("Area of rectangle with length 5 and width 3:", area_of_shape('rectangle',length=5,width=3))
+ print( "Area of triangle with base 4 and height 6:", area_of_shape('triangle', base=4, height=6))
+ 
