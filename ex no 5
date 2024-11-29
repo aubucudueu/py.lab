@@ -38,3 +38,19 @@ part_manufacturers = {
  print("Civil Structure Components:", civil_structure)
 for component in civil_structure:
     print(f"The {component} is made of {materials[component]}")
+
+ components_model_A = {"Engine", "Transmission", "Brakes"}
+ components_model_B = {"Brakes", "Suspension", "Exhaust"}
+ all_components = components_model_A.union(components_model_B)
+ print("Union of components:", all_components)
+ common_components = components_model_A.intersection(components_model_B)
+ print("Common components:", common_components)
+ unique_to_model_A = components_model_A.difference(components_model_B)
+ print("Components unique to Model A:", unique_to_model_A)
+ Union of components: {'Suspension', 'Engine', 'Brakes', 'Transmission', 'Exhaust'}
+ Common components: {'Brakes'}
+ Components unique to Model A: {'Engine', 'Transmission'}
+ part_manufacturers["Steering"] = "TRW"
+ part_manufacturers["Brakes"] = "Akebono"
+ for part, manufacturer in part_manufacturers.items():
+    print(f"{part} is manufactured by {manufacturer}")
