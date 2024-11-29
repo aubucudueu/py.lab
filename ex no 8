@@ -1,0 +1,20 @@
+import pandas as pd 
+import numpy as np 
+data = np.random.rand(5, 3) 
+df = pd.DataFrame(data, columns=["A", "B", "C"]) 
+print(df.describe())  # Gives a statistical summary of data 
+
+import matplotlib.pyplot as plt 
+x = np.linspace(0, 10, 100) 
+y = np.sin(x) 
+plt.plot(x, y) 
+plt.title("Sine Wave") 
+plt.xlabel("X-axis") 
+plt.ylabel("Y-axis") 
+plt.show() 
+
+from scipy.integrate import quad 
+def integrand(x): 
+return x**2 
+result, error = quad(integrand, 0, 1) 
+print(f"Integral of x^2 from 0 to 1: {result}") 
