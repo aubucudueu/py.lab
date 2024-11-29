@@ -1,0 +1,40 @@
+ text = "The quick brown fox jumps over the lazy dog"
+ unique_words = set(text.split())
+ grammar_roles = {
+    "The": "Article",
+    "quick": "Adjective",
+    "brown": "Adjective",
+    "fox": "Noun",
+    "jumps": "Verb",
+    "over": "Preposition",
+    "lazy": "Adjective",
+    "dog": "Noun"
+ }
+ print("Unique words in the text:", unique_words)
+ for word in unique_words:
+    print(f"The word '{word}' is a {grammar_roles.get(word,'unknown')}")
+
+ automobile_components = {"Engine", "Transmission", "Exhaust", "Brakes", "Suspension"}
+part_manufacturers = {
+    "Engine": "Ford",
+    "Transmission": "ZF",
+    "Exhaust": "MagnaFlow",
+    "Brakes": "Brembo",
+    "Suspension": "Bilstein"
+ }
+ print("Automobile Components:", automobile_components)
+ for component in automobile_components:
+    print(f"The {component} is manufactured by 
+{part_manufacturers[component]}")
+
+ civil_structure = {"Foundation", "Walls", "Roof", "Doors", "Windows"}
+ materials = {
+    "Foundation": "Concrete",
+    "Walls": "Brick",
+    "Roof": "Tile",
+    "Doors": "Wood",
+    "Windows": "Glass"
+ }
+ print("Civil Structure Components:", civil_structure)
+for component in civil_structure:
+    print(f"The {component} is made of {materials[component]}")
