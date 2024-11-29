@@ -1,0 +1,18 @@
+def copy_file(source, destination): 
+with open(source, 'r') as src, open(destination, 'w') as 
+dest: 
+dest.write(src.read()) 
+copy_file("source.txt", "destination.txt") 
+
+def word_count(filename): 
+with open(filename, 'r') as file: 
+text = file.read() 
+words = text.split() 
+return len(words) 
+print(word_count("source.txt")) 
+
+def longest_word(filename): 
+with open(filename, 'r') as file: 
+words = file.read().split() 
+return max(words, key=len) 
+print(longest_word("source.txt"))
