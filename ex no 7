@@ -1,0 +1,16 @@
+def reverse_string(s): 
+return s[::-1] 
+print(reverse_string("Hello, World!"))
+
+def is_palindrome(s): 
+return s == s[::-1] 
+print(is_palindrome("racecar"))
+
+from collections import Counter 
+def char_count(s): 
+return Counter(s) 
+print(char_count("Hello, World!"))
+
+def replace_character(s, old_char, new_char): 
+return s.replace(old_char, new_char) 
+print(replace_character("Hello, World!", "o", "a"))
