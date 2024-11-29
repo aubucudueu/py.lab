@@ -1,0 +1,29 @@
+library_books = ["The Great Gatsby", "1984", "To Kill a Mockingbird", "Pride and Prejudice"]
+ library_books.append("The Catcher in the Rye")
+ library_books.remove("1984")
+ if "The Great Gatsby" in library_books:
+    print("The Great Gatsby is available.")
+ else:
+    print("The Great Gatsby is not available.")
+ print("Current books in the library:", library_books)
+
+ car_components = ("Engine", "Wheels", "Chassis", "Transmission", "Brakes", "Steering")
+ print("The first component of the car is:", car_components[0])
+ print("List of car components:")
+ for component in car_components:
+    print(component)
+ engine_count = car_components.count("Engine")
+ print(f"Number of 'Engine' components in the tuple: {engine_count}")
+ index_of_transmission = car_components.index("Transmission")
+ print(f"Transmission is at index: {index_of_transmission}")
+
+ building_materials = ["Bricks", "Cement", "Steel", "Sand", "Gravel", 
+"Wood"]
+ building_materials.append("Glass")
+ building_materials.remove("Wood")
+ building_materials.sort()
+ print("Current building materials:", building_materials)
+ Current building materials: ['Bricks', 'Cement', 'Glass', 'Gravel', 'Sand', 'Steel']
+building_dimensions = (50, 30, 10)
+ length, width, height = building_dimensions
+print(f"Building dimensions: Length = {length}m , Lidth = {width}m , Height = {height}m")
